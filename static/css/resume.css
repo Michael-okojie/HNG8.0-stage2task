@@ -69,3 +69,10 @@ text-align: left;
 #contact_id {
     size: 40px;
 }
+
+#hng_logo{
+    height: 50%;
+    width: 50%;
+    padding: 10px;
+    margin: 10px;
+}
