@@ -27,7 +27,7 @@
 
 				<div class="yui-u">
 					<div class="contact-info">
-						<h3><a id="pdf" href="#">Download PDF</a></h3>
+<!--						<h3><a id="pdf" href="#">Download PDF</a></h3>-->
 						<h3><a href="mailto:michaelokojie1@gmail.com">michaelokojie1@gmail.com</a></h3>
 						<h3>+2347039831086</h3>
 					</div><!--// .contact-info -->
@@ -112,23 +112,23 @@
 						<div class="yui-u">
 
 							<div class="job">
-								<h2>Free Foods</h2>
+								<h2>Free Foods Inc. </h2>
 								<h3>Junior Web devloper</h3>
 								<h4>2019 - 2020</h4>
-								<p>Actively involved in the building and  </p>
+								<p>Actively involved in the building and management of the website codebase and the provision and management of everyday tasks and functions.  </p>
 							</div>
 
 							<div class="job">
-								<h2>Apple Inc.</h2>
-								<h3>Senior Interface Designer</h3>
-								<h4>2005-2007</h4>
+								<h2>Hotels.ng.</h2>
+								<h3>Backend Intern</h3>
+								<h4>2020 - Present </h4>
 								<p>Progressively reconceptualize multifunctional "outside the box" thinking through inexpensive methods of empowerment. Compellingly morph extensive niche markets with mission-critical ideas. Phosfluorescently deliver bricks-and-clicks strategic theme areas rather than scalable benefits. </p>
 							</div>
 
 							<div class="job last">
 								<h2></h2>
-								<h3>Lead Web Designer</h3>
-								<h4>2001-2004</h4>
+								<h3>Chicken and tinz</h3>
+								<h4>2020 - Now</h4>
 								<p>Globally re-engineer cross-media schemas through viral methods of empowerment. Proactively grow long-term high-impact human capital and highly efficient innovation. Intrinsicly iterate excellent e-tailers with timely e-markets.</p>
 							</div>
 
@@ -144,12 +144,26 @@
 							<h2>Federal University of Technology Akure, Ondo State, Nigeria.</h2>
 							<h3>Major in Software Engineering &mdash; <strong>4.5 GPA</strong> </h3>
 						</div>
-					</div><!--// .yui-gf -->
-
+					</div><!--// .yui-gf --><div style="margin:80px">
+		<h2>Contact me</h2>
+		<h4>Contact me directly if you have any questions</h4>
+		<p>
+			Please write your name, email address and a message below if you have any questions.
+			One of our staff members will be happy to contact you directly and answer your questions as soon as possible.
+		</p>
+		<form method="post">
+			<ul class="contactList">
+				{% csrf_token %}
+				{{ form.as_ul }}
+            <button value="submit">submit</button>
+			</ul>
+        </form>
+</div>
 
 				</div><!--// .yui-b -->
 			</div><!--// yui-main -->
 		</div><!--// bd -->
+
 
 		<div id="ft">
 			<p>Okojie Michael Osemudiamen &mdash; <a href="mailto:michaelokojie1@gmail.com">michaelokojie1@gmail.com</a> &mdash; +2437039831086</p>

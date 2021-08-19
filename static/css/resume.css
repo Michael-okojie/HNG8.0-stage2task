@@ -59,3 +59,13 @@ a#pdf:hover { background: #222; }
 .yui-gf div.first{width:12.3%;}
 
 
+
+#id_last_name, #id_first_name, #id_email_address, #id_message {
+color: black;
+text-align: left;
+
+}
+
+#contact_id {
+    size: 40px;
+}
