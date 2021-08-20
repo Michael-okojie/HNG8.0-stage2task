@@ -55,7 +55,7 @@ ROOT_URLCONF = 'HNG_task2.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR,'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -124,5 +124,15 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),
 ]
 
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
 django_heroku.settings(locals())
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+# EMAIL_HOST = 'smtp.mailgun.org'
+# EMAIL_PORT = 587
+# EMAIL_HOST_USER = 'postmaster@sandboxf6e26e47af254c58893b005cc48e58f3.mailgun.org'
+# EMAIL_HOST_PASSWORD = 'e94334af4e15c70d2548b65b467628a9-9776af14-0f3ef27d'
+# EMAIL_USE_TLS = True
+# # EMAIL_USE_SSL = False
+
+# CONTACT_EMAIL = 'michaelokojie1@gmail.com'
+# ADMIN_EMAIL = ['michaelokojie1@gmail.com']

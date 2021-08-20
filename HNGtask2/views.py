@@ -13,24 +13,26 @@ def home(request):
 
 
 def contact(request):
-    if request.method == 'POST':
-        form = ContactForm(request.POST)
-        if form.is_valid():
-            subject = "Inquiry"
-            body = {
-                'first_name': form.cleaned_data['first_name'],
-                'last_name': form.cleaned_data['last_name'],
-                'email': form.cleaned_data['email_address'],
-                'message': form.cleaned_data['message'],
-            }
-            message = "\n".join(body.values())
+	if request.method == 'POST':
+		form = ContactForm(request.POST)
+		if form.is_valid():
+			subject = "Resume Enquiry" 
+			body = {
+			'first_name': form.cleaned_data['first_name'], 
+			'last_name': form.cleaned_data['last_name'], 
+			'email': form.cleaned_data['email_address'], 
+			'message':form.cleaned_data['message'], 
+			}
+			message = "\n".join(body.values())
 
-            try:
-                send_mail(subject, message, 'michaelokojie1@gmail.com', ['michaelokojie1@gmail.com'])
-                messages.success(request, "MESSAGE SENT SUCCESSFULLY")
-            except BadHeaderError:
-                return HttpResponse('Invalid header found.')
-            return redirect('home')
-
-    form = ContactForm()
-    return render(request, 'index.html', {'form': form})
+			try:
+				send_mail(subject, message, 'admin@example.com', 'admin@example.com') 
+				# messages.success(request, 'messages.html')
+			except BadHeaderError:
+				return HttpResponse('Invalid header found.')
+			
+			return redirect ("home")
+		# messages.error(request, "Error. Message not sent.")	
+      
+	form = ContactForm()
+	return render(request, "index.html", {'form':form})
